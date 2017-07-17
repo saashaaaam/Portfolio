@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-      /* Style to reverse the caret icon from pointing downwards to upwards */
-  .caret.caret-up {
-    border-top-width: 0;
-    border-bottom: 4px solid #fff;
-  }
       body {background-color: Antiquewhite;}
       h1 {color: thistle;}
       h2 {color: thistle;}
+      
+      .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+      
     </style>
   </head>
   <header>
     <h1 style="font-family:palatino;"> Hi there! I'm Saasha. Welcome to my portfolio.</h1> <br>
   </header>
   <body>
+    
+    <h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+    
     <h2> About me:</h2> <br>
     <h3> My full name is Saasha Mane. I go to Cupertino High School, and I'm going to be a junior. In school, I'm heavily involved with DECA and ASB Leadership. I love dogs, my literature class, boba, and reading. I dislike bananas and math homework.</h3> <br>
     <h3> A fun fact about me is that I have a second degree black belt in Tae Kwon Do. I've been doing it since I was six. My favorite websites are Quora and Tumblr.</h3> <br>
     <a href="https://saashamane.github.io/Portfolio/projectsdirectory.html">Click here to check out my projects!</a> <br>
-    
-    <div class="container">                                       
-    <div class="Click for More!">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-  </div>
-</div>
-    
-    <script>
-$(document).ready(function(){
-  $(".dropdown").on("hide.bs.dropdown", function(){
-    $(".btn").html('Dropdown <span class="caret"></span>');
-  });
-  $(".dropdown").on("show.bs.dropdown", function(){
-    $(".btn").html('Dropdown <span class="caret caret-up"></span>');
-  });
-});
-</script>
+  
     
   </body>
  </html>
